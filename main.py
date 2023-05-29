@@ -2,7 +2,11 @@
 
 
 def largest_sum(numbers: list[int]) -> tuple[int, int]:
-    """Encontra e retorna os dois números que somados dão o maior valor."""
-    primeiro = 0  # o primeiro número da soma
-    segundo = 0  # o segundo número da soma
-    return primeiro, segundo
+    if len(numbers) > 1 :
+        numbers.sort()
+        popped_num = numbers.pop()
+        popped_num2 = numbers.pop()
+        print(f"({popped_num2}, {popped_num})")
+        return popped_num2, popped_num
+    else:
+        return None
